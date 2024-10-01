@@ -95,32 +95,8 @@ function filtrarPositius() {
     let llistaPositius = llistaNumeros.filter(num => num > 0);
 
     alert("Els números positius de la llista són: " + llistaPositius);
-}
+}  
 
-// To do list
-
-function addTask() {
-    let taskInput = document.getElementById("input").value; // agafem el valor de l'input
-
-    if (taskInput !== "") { // si l'input no està buit
-        let list = document.getElementById("list"); // agafem la llista
-        let newTask = document.createElement("li"); // creem un nou element li
-        
-        newTask.textContent = taskInput; // li assignem el text de l'input
-        
-        // Afegim un event listener només al nou element
-        newTask.addEventListener("click", () => {
-            newTask.remove(); // eliminem l'element
-        });
-        
-        list.appendChild(newTask); // afegim el nou element a la llista
-        document.getElementById("input").value = ""; // buidem l'input
-    } else {
-        alert("Escriu una tasca abans d'afegir-la"); // si l'input està buit, mostrem un missatge d'error
-    }
-
-    
-}
 
 
 
